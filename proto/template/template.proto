@@ -1,0 +1,18 @@
+syntax = "proto3";
+package template;
+
+option go_package = "github.com/LiveisFpv/template-proto;template";
+
+service TestRPC {
+    rpc TestConnection (TestConnectionRequest) returns (TestConnectionResponse);
+}
+
+message TestConnectionRequest {
+    string test_message = 1;
+    int32 test_value = 2;
+}
+
+message TestConnectionResponse {
+    string test_message = 1;
+    int32 test_value = 2;
+}
